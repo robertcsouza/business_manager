@@ -1,8 +1,11 @@
 import 'package:business_manager/Screens/Cadastro.dart';
 import 'package:business_manager/Screens/Home.dart';
+import 'package:business_manager/Screens/SolicitarMaterial.dart';
 import 'package:business_manager/Screens/Perfil.dart';
 import 'package:business_manager/Screens/main.dart';
+import 'package:business_manager/Screens/SolicitarMaterial.dart';
 import 'package:flutter/material.dart';
+
 
 
 
@@ -13,6 +16,7 @@ class RouteGenerator{
   static  const ROUTE_HOME = "/home";
   static  const ROUTE_CONFIGURACOES = "/Configuracoes";
   static  const ROUTE_PERFIL = "/perfil";
+  static  const ROUTE_MATERIAL = "/material";
 
 
   static Route <dynamic> GeneratorRoute(RouteSettings settings){
@@ -38,6 +42,10 @@ class RouteGenerator{
       case ROUTE_PERFIL:
         return MaterialPageRoute(
             builder: (_) =>Perfil()
+        );
+        case ROUTE_MATERIAL:
+        return MaterialPageRoute(
+            builder: (_) => SolicitarMaterial()
         );
       default:
         _erroRota();

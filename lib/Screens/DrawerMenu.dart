@@ -49,9 +49,11 @@ class DrawerMenu extends StatelessWidget {
               ),
             ),
             ListTile(
-              onTap: (){},
+              onTap: (){
+                Navigator.pushNamed(context, RouteGenerator.ROUTE_MATERIAL);
+              },
               leading: Icon(Icons.check_circle),
-              title: Text("Chamados Atendidos",
+              title: Text("Solicitar Material",
                 style: TextStyle(
                 fontSize: 13,
                 color: Colors.black54
